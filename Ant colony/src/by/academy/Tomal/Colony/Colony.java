@@ -17,13 +17,11 @@ public class Colony {
 	private List<Forager> foragers;
 	private int foodInStock;
 	private int colonyNeedFood;
-	private int colonySize;
+	private int colonyPopulation;
 	private int colonySquare;
 
-	public Colony() {
-		Scanner in = new Scanner(System.in);
-		System.out.print("¬ведите название колонии: ");
-		colonyName = in.nextLine();
+	protected Colony() {
+		colonyName = setColonyName();
 		workers = new ArrayList<Worker>();
 		soldiers = new ArrayList<Soldier>();
 		foragers = new ArrayList<Forager>();
@@ -31,6 +29,13 @@ public class Colony {
 	}
 
 	public String getColonyName() {
+		return colonyName;
+	}
+
+	private String setColonyName() {
+		Scanner in = new Scanner(System.in);
+		System.out.print("¬ведите название колонии: ");
+		String colonyName = in.nextLine();
 		return colonyName;
 	}
 
@@ -45,15 +50,15 @@ public class Colony {
 		foragers.add(queen.BornForager());
 		setColonyNeedFood(140);
 		setFoodInStock(140);
-		setColonySize();
+		setColonyPopulation();
 	}
 
-	public int getColonySize() {
-		return colonySize;
+	public int getColonyPopulation() {
+		return colonyPopulation;
 	}
 
-	private void setColonySize() {
-		this.colonySize = workers.size() + soldiers.size() + foragers.size();
+	private void setColonyPopulation() {
+		this.colonyPopulation = workers.size() + soldiers.size() + foragers.size();
 	}
 
 	public int getColonyNeedFood() {
@@ -92,7 +97,7 @@ public class Colony {
 			foragers.add(queen.BornForager());
 			setColonyNeedFood(10);
 		}
-		setColonySize();
+		setColonyPopulation();
 	}
 
 	protected void OrderMine() {

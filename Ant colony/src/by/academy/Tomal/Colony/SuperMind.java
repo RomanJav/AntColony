@@ -15,7 +15,7 @@ public class SuperMind {
 		while (true) {
 			System.out.println("Добро пожаловать, вы Коллективный разум колонии" + ants.getColonyName());
 			System.out.println("В вашем подчинении есть Королева, солдаты, рабочие и добытчики, отдайте им приказ!");
-			System.out.println("В вашем муравейнике " + ants.getColonySize() + " муравьев");
+			System.out.println("В вашем муравейнике " + ants.getColonyPopulation() + " муравьев");
 			System.out.println("Пищи в хранилище: " + ants.getFoodInStock());
 			System.out.println("Пищи необходимо: " + ants.getColonyNeedFood());
 			System.out.println("Размер вашего муравейника: " + ants.getColonySquare());

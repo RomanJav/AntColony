@@ -3,7 +3,7 @@ package by.academy.Tomal.Ants;
 public class Queen extends Ant {
 
 	public Queen() {
-		super(200, 100);
+		super(200, 100, "Queen");
 	}
 
 	public Worker BornWorker() {

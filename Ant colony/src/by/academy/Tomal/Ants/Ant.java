@@ -1,14 +1,24 @@
 package by.academy.Tomal.Ants;
 
 public abstract class Ant {
+	private String name;
 	private int size;
 	private int hungryLevel;
 	private int satiety;
 
-	public Ant(int size, int hungryLevel) {
+	protected Ant(int size, int hungryLevel, String name) {
+		setName(name);
 		setSize(size);
 		setHungryLevel(hungryLevel);
 		setSatiety(100);
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public int getSize() {
