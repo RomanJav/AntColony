@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import by.academy.Tomal.Ants.Forager;
-import by.academy.Tomal.Ants.Queen;
-import by.academy.Tomal.Ants.Soldier;
-import by.academy.Tomal.Ants.Worker;
+import by.academy.Tomal.Insects.Ants.Forager;
+import by.academy.Tomal.Insects.Ants.Queen;
+import by.academy.Tomal.Insects.Ants.Soldier;
+import by.academy.Tomal.Insects.Ants.Worker;
 
 public class Colony {
 	private final String colonyName;

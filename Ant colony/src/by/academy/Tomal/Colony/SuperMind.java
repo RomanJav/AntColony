@@ -1,7 +1,8 @@
 package by.academy.Tomal.Colony;
 
-import java.io.Console;
 import java.util.Scanner;
+
+import by.academy.Tomal.Insects.Myrmecophilies.Lomechusa;
 
 public class SuperMind {
 	private Colony ants;
@@ -9,6 +10,8 @@ public class SuperMind {
 	public SuperMind() {
 		this.ants = new Colony();
 		ControlYourColony();
+		Lomechusa lomechusa=new Lomechusa();
+		lomechusa.seekAntColony(this.ants);
 	}
 
 	private void ControlYourColony() {
